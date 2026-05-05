@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Dependências (caso adicione build no futuro)
+node_modules/
+
+# Vercel
+.vercel/
+
+# Uploads originais (PDF, backups, PNGs sem otimizar — só local)
+uploads/
+
+# Logs / temp
+*.log
+.tmp/
+
+# Dev-only (não usado em produção)
+tweaks-panel.jsx
+package-lock.json

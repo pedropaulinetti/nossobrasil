@@ -1161,18 +1161,18 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.5));
 }
 .hero-v2 .brand-deco.h-faixa {
-  top: 18%; left: -20px;
-  width: 140px; height: 38px;
-  transform: rotate(-12deg);
-  border-radius: 999px;
+  top: 18%; left: 12px;
+  width: 60px; height: 60px;
+  transform: rotate(-8deg);
+  border-radius: 14px;
   background: var(--nbi-pink);
   box-shadow: 0 12px 32px rgba(233, 65, 153, 0.35);
 }
 .hero-v2 .brand-deco.h-faixa-2 {
-  top: 26%; left: -12px;
-  width: 120px; height: 22px;
-  transform: rotate(-12deg);
-  border-radius: 999px;
+  top: 28%; left: 32px;
+  width: 40px; height: 40px;
+  transform: rotate(-8deg);
+  border-radius: 10px;
   background: var(--nbi-orange);
 }
 .hero-v2 .brand-deco.h-casa {
@@ -1183,8 +1183,8 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   .hero-v2 .brand-deco.h-sol  { width: 60px; height: 60px; top: 12%; right: 4%; }
   .hero-v2 .brand-deco.h-vaso { width: 50px; height: 70px; bottom: 30%; left: 4%; }
   .hero-v2 .brand-deco.h-casa { width: 64px; height: 64px; bottom: 28%; right: 6%; }
-  .hero-v2 .brand-deco.h-faixa  { width: 90px;  height: 24px; top: 16%; }
-  .hero-v2 .brand-deco.h-faixa-2 { width: 70px; height: 14px; top: 22%; }
+  .hero-v2 .brand-deco.h-faixa  { width: 44px; height: 44px; top: 16%; left: 8px; }
+  .hero-v2 .brand-deco.h-faixa-2 { width: 30px; height: 30px; top: 24%; left: 24px; }
 }
 
 /* "Wedge" brand-color row — 7 pontinhos / círculos das cores NBI */

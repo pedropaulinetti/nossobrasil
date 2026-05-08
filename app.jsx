@@ -596,9 +596,9 @@ function Pillars() {
 /* -------- Smart Cities -------- */
 function Smart() {
   const offerings = [
-    { color: "var(--nbi-blue)", icon: <ShapeLamp color="#fff"/>, title: "Iluminação inteligente", text: "Postes conectados, sensores de presença e gestão remota de energia urbana." },
+    { color: "var(--nbi-blue)", icon: <ShapeLamp color="#fff"/>, title: "Infraestrutura", text: "Indústria 4.0, incubadoras, wi-fi público, iluminação inteligente e monitoramento climático." },
     { color: "var(--nbi-green)", icon: <ShapeHouse color="#fff"/>, title: "Habitação digna", text: "Sistemas de bioconstrução, moradia assistida e plataforma de mapeamento." },
-    { color: "var(--nbi-orange)", icon: <ShapeRoad color="#fff"/>, title: "Mobilidade urbana", text: "Soluções de mobilidade ativa, transporte público inteligente e segurança viária." },
+    { color: "var(--nbi-orange)", icon: <ShapeHeart color="#fff"/>, title: "Serviços sociais", text: "Banco de Tempo, cidadania financeira, cozinha social e biblioteca de objetos." },
     { color: "var(--nbi-pink)", icon: <ShapeFlower color="#fff"/>, title: "Espaços verdes", text: "Hortas urbanas, praças vivas e gestão participativa de áreas comunitárias." },
     { color: "var(--nbi-cyan)", icon: <ShapeSun color="#fff"/>, title: "Energia limpa", text: "Projetos de energia solar comunitária e eficiência energética em prédios públicos." },
     { color: "var(--nbi-yellow)", icon: <ShapeHeart color="#222"/>, title: "Saúde conectada", text: "Telemedicina com IA, triagem avançada e dispositivos para assistência médica." },

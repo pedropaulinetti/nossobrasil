@@ -499,33 +499,36 @@ function Pillars() {
       cls: "f-edu",
       num: "01",
       iconSrc: "assets/sol.png",
-      title: "Educação que liberta.",
+      title: "Por que?",
       items: [
-        "Trilhas socioeducativas para crianças e jovens",
-        "Laboratórios maker em escolas da rede pública",
-        "Mentoria com universidades e empresas-âncora",
+        "Ajudar o Brasil a dar um passo firme rumo a cidades melhores para as pessoas",
+        "'Não deixar ninguém para trás' é o lema da Agenda 2030 para o desenvolvimento sustentável",
       ],
     },
     {
       cls: "f-cid",
       num: "02",
       iconSrc: "assets/casa.png",
-      title: "Cidades sustentáveis.",
+      title: "Para quem?",
       items: [
-        "Iluminação pública conectada e eficiência energética",
-        "Mobilidade ativa e transporte público inteligente",
-        "Praças vivas, hortas urbanas e gestão participativa",
+        "Prefeitos, agentes técnicos e políticos",
+        "Poder legislativo e judiciário",
+        "Instituições de ensino e pesquisa",
+        "Setor privado",
+        "Organizações da sociedade civil",
       ],
     },
     {
       cls: "f-inc",
       num: "03",
       iconSrc: "assets/vaso.png",
-      title: "Inclusão e dignidade.",
+      title: "Para que foi feito?",
       items: [
-        "Geração de renda em comunidades vulneráveis",
-        "Saúde digital e suporte às UBS de bairro",
-        "Dados abertos e participação cívica de verdade",
+        "Definir 'cidades inteligentes' no contexto brasileiro",
+        "Fomentar o desenvolvimento econômico local",
+        "Estimular modelos e instrumentos de financiamento",
+        "Fortalecer o papel do poder público",
+        "Criar maior engajamento da sociedade",
       ],
     },
   ];
@@ -576,34 +579,6 @@ function Pillars() {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="features-v2-explainer">
-          <div className="explainer-col">
-            <h4>Por que?</h4>
-            <p>O objetivo é ajudar o Brasil a dar um passo firme rumo a cidades melhores para as pessoas.</p>
-            <p>"Não deixar ninguém para trás" é o lema da Agenda 2030 para o desenvolvimento sustentável.</p>
-          </div>
-          <div className="explainer-col">
-            <h4>Para quem?</h4>
-            <ul>
-              <li>Prefeitos, agentes técnicos e políticos</li>
-              <li>Poder legislativo e judiciário</li>
-              <li>Instituições de ensino e pesquisa</li>
-              <li>Setor privado</li>
-              <li>Organizações da sociedade civil</li>
-            </ul>
-          </div>
-          <div className="explainer-col">
-            <h4>Para que foi feito?</h4>
-            <ul>
-              <li>Definir 'cidades inteligentes' no contexto brasileiro</li>
-              <li>Fomentar o desenvolvimento econômico local</li>
-              <li>Estimular modelos e instrumentos de financiamento</li>
-              <li>Fortalecer o papel do poder público</li>
-              <li>Criar maior engajamento da sociedade</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>

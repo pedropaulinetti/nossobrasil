@@ -1604,53 +1604,6 @@ textarea.form-control { resize: vertical; min-height: 110px; }
 .divider-shape { width: 44px; height: 44px; border-radius: 50%; }
 .divider-shape.sq { border-radius: 8px; }
 
-/* ---------- Pillars: explainer columns ---------- */
-.features-v2-explainer {
-  margin-top: 48px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 32px;
-  background: rgba(254, 250, 240, 0.04);
-  border: 1px solid rgba(254, 250, 240, 0.08);
-  border-radius: 16px;
-}
-@media (max-width: 900px) {
-  .features-v2-explainer { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
-}
-.features-v2-explainer .explainer-col h4 {
-  color: var(--nbi-green, #4c9f38);
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 12px;
-  letter-spacing: -0.01em;
-}
-.features-v2-explainer .explainer-col p {
-  color: rgba(254, 250, 240, 0.78);
-  font-size: 14.5px;
-  line-height: 1.55;
-  margin: 0 0 10px;
-}
-.features-v2-explainer .explainer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.features-v2-explainer .explainer-col li {
-  color: rgba(254, 250, 240, 0.78);
-  font-size: 14.5px;
-  line-height: 1.6;
-  padding: 4px 0;
-  position: relative;
-  padding-left: 14px;
-}
-.features-v2-explainer .explainer-col li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: rgba(254, 250, 240, 0.4);
-}
-
 /* ---------- Founder / FIB tweaks ---------- */
 .founder-tagline {
   font-size: clamp(22px, 2.4vw, 30px);

@@ -216,9 +216,9 @@ function Hero() {
 
   const navLinks = [
     { href: "#sobre",     label: "Sobre" },
-    { href: "#pilares",   label: "Pilares" },
-    { href: "#smart",     label: "Cidades" },
-    { href: "#fundador",  label: "Fundador" },
+    { href: "#pilares",   label: "Iniciativa" },
+    { href: "#smart",     label: "Cardápio" },
+    { href: "#ods",       label: "Indicadores" },
     { href: "#contato",   label: "Contato" },
   ];
 
@@ -254,7 +254,7 @@ function Hero() {
 
         <div ref={contentRef} className="hero-v2-content">
           <div className="hero-v2-title-wrap">
-            <div className="hero-v2-eyebrow">Movimento NBI · 2030</div>
+            <div className="hero-v2-eyebrow">Um Sonho de Muitos</div>
             <h1 ref={titleRef} className="hero-v2-title" aria-label="Nosso Brasil">
               {words.map((w, i) => (
                 <span key={i} className="word">
@@ -270,11 +270,10 @@ function Hero() {
 
           <div className="hero-v2-side">
             <p className="hero-v2-lede">
-              Uma rede de cidadãos, gestores públicos e parceiros de tecnologia conectados
-              por uma só inquietação: transformar cidades brasileiras em lugares mais
-              humanos, sustentáveis e cheios de oportunidades.
+              Um mundo mais justo e feliz para todos. Ajudamos cidades a se
+              tornarem lugares melhores para viver através de soluções urbanas integradas.
             </p>
-            <a href="#sobre" className="hero-v2-cta" aria-label="Junte-se ao movimento">
+            <a href="#contato" className="hero-v2-cta" aria-label="Junte-se ao movimento">
               <span>Junte-se ao movimento</span>
               <span className="hero-v2-cta-circle" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -322,7 +321,7 @@ function About() {
   // Headline em 3 segmentos com pesos/estilos diferentes
   const segments = [
     { text: "Somos uma rede", italic: false },
-    { text: "de cidadãos curiosos.", italic: true },
+    { text: "de cidadãos engajados.", italic: true },
     { text: "Atuamos com tecnologia, empatia e dados para reescrever a rotina das cidades brasileiras.", italic: false },
   ];
 
@@ -414,7 +413,7 @@ function About() {
     );
   });
 
-  const bodyText = "Há mais de duas décadas, o NBI conecta prefeituras, organizações da sociedade civil e iniciativa privada em projetos de cidades inteligentes ancorados nos Objetivos de Desenvolvimento Sustentável da ONU. O resultado é Brasil acontecendo de forma concreta — com escala, medida e cuidado.";
+  const bodyText = "";
 
   return (
     <section id="sobre" className="about-v2">
@@ -433,7 +432,7 @@ function About() {
         <h2 ref={headlineRef} className="about-v2-headline">
           {renderedSegments}
         </h2>
-        <p ref={bodyRef} className="about-v2-body">
+        <p ref={bodyRef} className="about-v2-body" style={{ display: 'none' }}>
           {/* nbsp render hack abaixo */}
           {bodyText.split('').map((c, i) => (
             <span key={i} className="ch">{c === ' ' ? ' ' : c}</span>
@@ -575,11 +574,36 @@ function Pillars() {
                   <li key={i}><Check/><span>{it}</span></li>
                 ))}
               </ul>
-              <a href="#sobre" className="feat-link">
-                Saiba mais <span className="arrow"><Arrow/></span>
-              </a>
             </div>
           ))}
+        </div>
+
+        <div className="features-v2-explainer">
+          <div className="explainer-col">
+            <h4>Por que?</h4>
+            <p>O objetivo é ajudar o Brasil a dar um passo firme rumo a cidades melhores para as pessoas.</p>
+            <p>"Não deixar ninguém para trás" é o lema da Agenda 2030 para o desenvolvimento sustentável.</p>
+          </div>
+          <div className="explainer-col">
+            <h4>Para quem?</h4>
+            <ul>
+              <li>Prefeitos, agentes técnicos e políticos</li>
+              <li>Poder legislativo e judiciário</li>
+              <li>Instituições de ensino e pesquisa</li>
+              <li>Setor privado</li>
+              <li>Organizações da sociedade civil</li>
+            </ul>
+          </div>
+          <div className="explainer-col">
+            <h4>Para que foi feito?</h4>
+            <ul>
+              <li>Definir 'cidades inteligentes' no contexto brasileiro</li>
+              <li>Fomentar o desenvolvimento econômico local</li>
+              <li>Estimular modelos e instrumentos de financiamento</li>
+              <li>Fortalecer o papel do poder público</li>
+              <li>Criar maior engajamento da sociedade</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -590,25 +614,27 @@ function Pillars() {
 function Smart() {
   const offerings = [
     { color: "var(--nbi-blue)", icon: <ShapeLamp color="#fff"/>, title: "Iluminação inteligente", text: "Postes conectados, sensores de presença e gestão remota de energia urbana." },
-    { color: "var(--nbi-green)", icon: <ShapeHouse color="#fff"/>, title: "Habitação digna", text: "Plataformas de mapeamento, regularização fundiária e moradia assistida." },
+    { color: "var(--nbi-green)", icon: <ShapeHouse color="#fff"/>, title: "Habitação digna", text: "Sistemas de bioconstrução, moradia assistida e plataforma de mapeamento." },
     { color: "var(--nbi-orange)", icon: <ShapeRoad color="#fff"/>, title: "Mobilidade urbana", text: "Soluções de mobilidade ativa, transporte público inteligente e segurança viária." },
     { color: "var(--nbi-pink)", icon: <ShapeFlower color="#fff"/>, title: "Espaços verdes", text: "Hortas urbanas, praças vivas e gestão participativa de áreas comunitárias." },
     { color: "var(--nbi-cyan)", icon: <ShapeSun color="#fff"/>, title: "Energia limpa", text: "Projetos de energia solar comunitária e eficiência energética em prédios públicos." },
-    { color: "var(--nbi-yellow)", icon: <ShapeHeart color="#222"/>, title: "Saúde conectada", text: "Triagem digital, prontuário unificado e suporte às UBS de bairro." },
-    { color: "#4c359a", icon: <ShapeStripes color="#fff"/>, title: "Dados abertos", text: "Painéis de transparência cívica e participação popular em decisões públicas." },
-    { color: "var(--nbi-red)", icon: <ShapeRoad color="#fff"/>, title: "Segurança comunitária", text: "Tecnologia para apoio à proteção social e redes de cuidado entre vizinhos." },
+    { color: "var(--nbi-yellow)", icon: <ShapeHeart color="#222"/>, title: "Saúde conectada", text: "Telemedicina com IA, triagem avançada e dispositivos para assistência médica." },
+    { color: "#4c359a", icon: <ShapeStripes color="#fff"/>, title: "Dados abertos", text: "Gestão do terceiro setor, das escolas e painéis de transparência cívica." },
+    { color: "var(--nbi-red)", icon: <ShapeStripes color="#fff"/>, title: "Segurança", text: "Tecnologia preventiva para proteção social e monitoramento urbano." },
+    { color: "#2a3ea0", icon: <ShapeLamp color="#fff"/>, title: "Infraestrutura", text: "Indústria 4.0, incubadoras, wi-fi público, iluminação inteligente e monitoramento climático." },
+    { color: "var(--nbi-orange)", icon: <ShapeHeart color="#fff"/>, title: "Serviços sociais", text: "Banco de Tempo, cidadania financeira, cozinha social e biblioteca de objetos." },
   ];
   return (
     <section id="smart" className="sec smart">
       <div className="container">
         <BrandHead
           theme="on-light"
-          kicker="Smart Cities"
+          kicker="Cardápio Nosso"
           segments={[
-            { text: "Tecnologia que" },
+            { text: "Inteligência que" },
             { text: "cabe na rotina.", italic: true },
           ]}
-          lede="Soluções modulares prontas pra serem adotadas por municípios de qualquer porte — do interior à grande capital."
+          lede="Mais de 100 soluções prontas para serem adotadas por municípios brasileiros — um ecossistema verdadeiramente revolucionário."
         />
         <div className="smart-grid reveal-stagger">
           {offerings.map((o, i) => (
@@ -718,17 +744,17 @@ function Ods() {
   );
 }
 
-/* -------- Founder -------- */
+/* -------- FIB (Felicidade Interna Bruta) -------- */
 function Founder() {
   return (
     <section id="fundador" className="sec founder">
       <div className="container">
         <BrandHead
           theme="on-dark"
-          kicker="Fundador"
+          kicker="FIB"
           segments={[
-            { text: "Quem está", },
-            { text: "no leme.", italic: true },
+            { text: "Felicidade", italic: true },
+            { text: "Interna Bruta." },
           ]}
           showDots={false}
         />
@@ -736,27 +762,35 @@ function Founder() {
           <div className="founder-grid">
             <div className="founder-photo reveal">
               <div className="founder-photo-bg"/>
-              <img src="assets/sebastian.png" alt="Sebastian, fundador"/>
+              <img src="assets/sebastian.png" alt="Sebastian Soul, embaixador"/>
+              <div className="founder-photo-caption">
+                <strong>Sebastian Soul</strong>
+                <span>Embaixador</span>
+              </div>
             </div>
             <div className="founder-text reveal">
-              <h2>
-                Sebastian <span className="seg-italic">Dias.</span>
+              <h2 className="founder-tagline">
+                Nós não criamos apenas cidades inteligentes.
+                <br/>
+                Nós criamos cidades <span className="seg-italic">felizes, humanas e sustentáveis.</span>
               </h2>
-              <div className="founder-role">Idealizador do Nosso Brasil Inteligente</div>
-              <div className="founder-quote">
-                "Acredito que o Brasil inteligente é aquele que cabe no colo de uma criança
-                — onde tecnologia significa cuidado, oportunidade e dignidade."
+              <p>
+                FIB é um índice de desenvolvimento que prioriza o bem-estar
+                psicológico em vez de apenas o crescimento econômico (medido pelo PIB).
+              </p>
+              <p>
+                A felicidade de uma população é medida através de uma metodologia
+                estruturada em quatro pilares fundamentais, que se desdobram em
+                nove domínios específicos:
+              </p>
+              <div className="fib-block">
+                <div className="fib-label">Pilares</div>
+                <p>Boa governança · Desenvolvimento Sustentável · Preservação Cultural · Conservação Ambiental.</p>
               </div>
-              <p>
-                Empreendedor social, com mais de duas décadas dedicadas ao
-                desenvolvimento de comunidades brasileiras, Sebastian articula
-                parcerias entre poder público, iniciativa privada e organizações
-                de base para transformar boas ideias em impacto real.
-              </p>
-              <p>
-                Ele lidera o NBI ao lado de uma rede crescente de educadores,
-                tecnólogos e ativistas comprometidos com um país mais justo.
-              </p>
+              <div className="fib-block">
+                <div className="fib-label">Domínios</div>
+                <p>Bem-estar psicológico · Saúde · Educação · Uso do tempo · Diversidade e resiliência cultural · Boa governança · Vitalidade comunitária · Diversidade e resiliência ecológica · Padrão de vida.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -848,7 +882,7 @@ function News() {
             { text: "O que está" },
             { text: "se movendo.", italic: true },
           ]}
-          lede="Histórias, estudos e bastidores das nossas iniciativas por todo o território nacional."
+          lede="Histórias, estudos e bastidores de iniciativas por todo o território nacional."
         />
         <div className="news-grid reveal-stagger">
           {items.map((n, i) => (
@@ -1072,7 +1106,7 @@ function App() {
       <Smart/>
       <Ods/>
       <Founder/>
-      <Projects/>
+      {/* <Projects/> — suspenso temporariamente */}
       <Partners/>
       <News/>
       <Contact/>

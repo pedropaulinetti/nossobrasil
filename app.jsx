@@ -936,7 +936,7 @@ function Contact() {
             </div>
             <div>
               <div className="label">E-mail</div>
-              <div className="value">contato@nossobrasilinteligente.org</div>
+              <div className="value">contato@nossobrasilinteligente.com.br</div>
             </div>
           </div>
           <div className="contact-item">
@@ -1020,7 +1020,7 @@ function Contact() {
           {sent && (
             <div className="form-success">
               <span style={{ fontSize: 18 }}>✓</span>
-              Recebemos sua mensagem! Em breve nosso time entra em contato.
+              Em breve retornaremos o contato.
             </div>
           )}
         </form>
@@ -1061,7 +1061,7 @@ function Footer() {
           <div>
             <h5>Contato</h5>
             <a href="#contato">Fale conosco</a>
-            <a href="mailto:contato@nossobrasilinteligente.org">E-mail</a>
+            <a href="mailto:contato@nossobrasilinteligente.com.br">E-mail</a>
             <a href="#">Imprensa</a>
             <a href="#">Voluntariado</a>
           </div>

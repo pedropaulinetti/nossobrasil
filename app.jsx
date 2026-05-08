@@ -71,6 +71,14 @@ function ShapeStripes({ color = "#fff" }) {
     </svg>
   );
 }
+function ShapeShield({ color = "#fff" }) {
+  return (
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <path fill={color} d="M50 10 L86 22 L86 52 C86 70 70 84 50 92 C30 84 14 70 14 52 L14 22 Z"/>
+      <path d="M34 50 L46 62 L68 38" fill="none" stroke={color === "#fff" ? "#2a3ea0" : "#fff"} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
 
 /* -------- Reveal hook -------- */
 function useReveal() {
@@ -595,9 +603,7 @@ function Smart() {
     { color: "var(--nbi-cyan)", icon: <ShapeSun color="#fff"/>, title: "Energia limpa", text: "Projetos de energia solar comunitária e eficiência energética em prédios públicos." },
     { color: "var(--nbi-yellow)", icon: <ShapeHeart color="#222"/>, title: "Saúde conectada", text: "Telemedicina com IA, triagem avançada e dispositivos para assistência médica." },
     { color: "#4c359a", icon: <ShapeStripes color="#fff"/>, title: "Dados abertos", text: "Gestão do terceiro setor, das escolas e painéis de transparência cívica." },
-    { color: "var(--nbi-red)", icon: <ShapeStripes color="#fff"/>, title: "Segurança", text: "Tecnologia preventiva para proteção social e monitoramento urbano." },
-    { color: "#2a3ea0", icon: <ShapeLamp color="#fff"/>, title: "Infraestrutura", text: "Indústria 4.0, incubadoras, wi-fi público, iluminação inteligente e monitoramento climático." },
-    { color: "var(--nbi-orange)", icon: <ShapeHeart color="#fff"/>, title: "Serviços sociais", text: "Banco de Tempo, cidadania financeira, cozinha social e biblioteca de objetos." },
+    { color: "var(--nbi-red)", icon: <ShapeShield color="#fff"/>, title: "Segurança", text: "Tecnologia preventiva para proteção social e monitoramento urbano." },
   ];
   return (
     <section id="smart" className="sec smart">

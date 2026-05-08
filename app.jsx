@@ -1055,8 +1055,6 @@ function Footer() {
             <h5>Atuação</h5>
             <a href="#smart">Smart Cities</a>
             <a href="#ods">17 ODS</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#noticias">Notícias</a>
           </div>
           <div>
             <h5>Contato</h5>
@@ -1089,7 +1087,7 @@ function App() {
       <Founder/>
       {/* <Projects/> — suspenso temporariamente */}
       <Partners/>
-      <News/>
+      {/* <News/> — oculto temporariamente */}
       <Contact/>
       <Footer/>
     </>

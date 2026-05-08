@@ -1157,7 +1157,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
 }
 .hero-v2 .brand-deco.h-vaso {
   bottom: 18%; left: 4%;
-  width: 80px; height: 110px;
+  width: 90px; height: 90px;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.5));
 }
 .hero-v2 .brand-deco.h-faixa {
@@ -1181,7 +1181,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
 }
 @media (max-width: 767px) {
   .hero-v2 .brand-deco.h-sol  { width: 60px; height: 60px; top: 12%; right: 4%; }
-  .hero-v2 .brand-deco.h-vaso { width: 50px; height: 70px; bottom: 30%; left: 4%; }
+  .hero-v2 .brand-deco.h-vaso { width: 56px; height: 56px; bottom: 30%; left: 4%; }
   .hero-v2 .brand-deco.h-casa { width: 64px; height: 64px; bottom: 28%; right: 6%; }
   .hero-v2 .brand-deco.h-faixa  { width: 44px; height: 44px; top: 16%; left: 8px; }
   .hero-v2 .brand-deco.h-faixa-2 { width: 30px; height: 30px; top: 24%; left: 24px; }
@@ -1273,15 +1273,15 @@ textarea.form-control { resize: vertical; min-height: 110px; }
 }
 .about-v2 .brand-deco.a-vaso {
   top: 45%; right: 6%;
-  width: 60px; height: 80px;
+  width: 70px; height: 70px;
 }
 .about-v2 .brand-deco.a-casa {
   bottom: 60px; right: 10%;
-  width: 60px; height: 60px;
+  width: 70px; height: 70px;
 }
 .about-v2 .brand-deco.a-poste {
   bottom: 100px; left: 5%;
-  width: 28px; height: 110px;
+  width: 70px; height: 70px;
 }
 @media (max-width: 900px) {
   .about-v2 .brand-deco { display: none; }

@@ -251,13 +251,13 @@ function Hero() {
         <div className="brand-deco h-faixa" aria-hidden="true"/>
         <div className="brand-deco h-faixa-2" aria-hidden="true"/>
         <div className="brand-deco h-sol float-a" aria-hidden="true">
-          <img src="assets/sol.png" alt=""/>
+          <img src="assets/icon-shape.svg" alt=""/>
         </div>
         <div className="brand-deco h-vaso float-b" aria-hidden="true">
-          <img src="assets/vaso.png" alt=""/>
+          <img src="assets/icon-pin.svg" alt=""/>
         </div>
         <div className="brand-deco h-casa float-c" aria-hidden="true">
-          <img src="assets/casa.png" alt=""/>
+          <img src="assets/icon-heart.svg" alt=""/>
         </div>
 
         <div ref={contentRef} className="hero-v2-content">
@@ -425,10 +425,10 @@ function About() {
 
   return (
     <section id="sobre" className="about-v2">
-      <div className="brand-deco a-sol float-a" aria-hidden="true"><img src="assets/sol.png" alt=""/></div>
-      <div className="brand-deco a-vaso float-b" aria-hidden="true"><img src="assets/vaso.png" alt=""/></div>
-      <div className="brand-deco a-casa float-c" aria-hidden="true"><img src="assets/casa.png" alt=""/></div>
-      <div className="brand-deco a-poste float-a" aria-hidden="true"><img src="assets/poste.png" alt=""/></div>
+      <div className="brand-deco a-sol float-a" aria-hidden="true"><img src="assets/icon-shape.svg" alt=""/></div>
+      <div className="brand-deco a-vaso float-b" aria-hidden="true"><img src="assets/icon-pin.svg" alt=""/></div>
+      <div className="brand-deco a-casa float-c" aria-hidden="true"><img src="assets/icon-heart.svg" alt=""/></div>
+      <div className="brand-deco a-poste float-a" aria-hidden="true"><img src="assets/icon-lamp.svg" alt=""/></div>
 
       <div className="about-v2-card">
         <img

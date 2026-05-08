@@ -1037,7 +1037,7 @@ function Footer() {
         <div className="foot-top">
           <div>
             <div className="foot-logo">
-              <img src="assets/logo-nbi.png" alt="NBI" style={{ height: 40 }}/>
+              <img src="assets/logo-nbi-white.svg" alt="NBI" style={{ height: 40 }}/>
             </div>
             <p style={{ fontSize: 14, lineHeight: 1.55, maxWidth: 320, margin: 0 }}>
               Movimento brasileiro pelo desenvolvimento de cidades inteligentes,
@@ -1068,7 +1068,7 @@ function Footer() {
         </div>
         <div className="foot-bot">
           <div>© {new Date().getFullYear()} Nosso Brasil Inteligente. Todos os direitos reservados.</div>
-          <div>Feito no Brasil, com 💛 para o Brasil.</div>
+          <div>Feito no Brasil, para os brasileiros.</div>
         </div>
       </div>
     </footer>

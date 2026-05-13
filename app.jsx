@@ -909,7 +909,7 @@ function Contact() {
 
     setSending(true);
     try {
-      const res = await fetch("https://formsubmit.co/ajax/contato@nossobrasilinteligente.com.br", {
+      const res = await fetch("https://formsubmit.co/ajax/fernando@nossobrasilinteligente.com.br", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({

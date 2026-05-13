@@ -909,13 +909,12 @@ function Contact() {
 
     setSending(true);
     try {
-      const res = await fetch("https://formsubmit.co/ajax/fernando@nossobrasilinteligente.com.br", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `Novo contato via site — ${type}: ${form.nome}`,
-          _template: "table",
-          _captcha: "false",
+          access_key: "0feab8ad-1b3b-4802-86ad-8a9fe6924c65",
+          subject: `Novo contato via site — ${type}: ${form.nome}`,
           Tipo: type,
           Nome: form.nome,
           Email: form.email,
@@ -924,7 +923,7 @@ function Contact() {
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || data.success === "false") {
+      if (!res.ok || !data.success) {
         throw new Error(data.message || "Falha no envio.");
       }
       setSent(true);

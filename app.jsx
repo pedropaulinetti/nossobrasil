@@ -888,6 +888,8 @@ function Contact() {
   const [form, setForm] = useState({ nome: "", email: "", org: "", mensagem: "" });
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
   const types = ["Prefeitura", "ONG", "Empresa", "Cidadão", "Imprensa"];
 
   function validate() {
@@ -898,14 +900,40 @@ function Contact() {
     if (!form.mensagem.trim()) e.mensagem = "Conte um pouco do seu interesse.";
     return e;
   }
-  function submit(ev) {
+  async function submit(ev) {
     ev.preventDefault();
     const e = validate();
     setErrors(e);
-    if (Object.keys(e).length === 0) {
+    setSendError("");
+    if (Object.keys(e).length !== 0) return;
+
+    setSending(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/contato@nossobrasilinteligente.com.br", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Novo contato via site — ${type}: ${form.nome}`,
+          _template: "table",
+          _captcha: "false",
+          Tipo: type,
+          Nome: form.nome,
+          Email: form.email,
+          Organização: form.org || "—",
+          Mensagem: form.mensagem,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.success === "false") {
+        throw new Error(data.message || "Falha no envio.");
+      }
       setSent(true);
       setForm({ nome: "", email: "", org: "", mensagem: "" });
-      setTimeout(() => setSent(false), 5000);
+      setTimeout(() => setSent(false), 6000);
+    } catch (err) {
+      setSendError("Não foi possível enviar agora. Tente novamente em instantes ou escreva direto para contato@nossobrasilinteligente.com.br.");
+    } finally {
+      setSending(false);
     }
   }
 
@@ -1014,14 +1042,17 @@ function Contact() {
             />
             {errors.mensagem && <div className="error-text">{errors.mensagem}</div>}
           </div>
-          <button type="submit" className="btn form-submit">
-            Enviar mensagem <span className="btn-arrow">→</span>
+          <button type="submit" className="btn form-submit" disabled={sending}>
+            {sending ? "Enviando…" : <>Enviar mensagem <span className="btn-arrow">→</span></>}
           </button>
           {sent && (
             <div className="form-success">
               <span style={{ fontSize: 18 }}>✓</span>
               Em breve retornaremos o contato.
             </div>
+          )}
+          {sendError && (
+            <div className="form-error">{sendError}</div>
           )}
         </form>
       </div>

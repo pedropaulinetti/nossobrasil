@@ -600,6 +600,8 @@ section.sec { padding: 120px 0; position: relative; }
 textarea.form-control { resize: vertical; min-height: 110px; }
 .form-submit { margin-top: 12px; width: 100%; justify-content: center; background: var(--nbi-yellow); color: var(--nbi-ink); font-weight: 700; }
 .form-submit:hover { background: #fff; }
+.form-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+.form-submit:disabled:hover { background: var(--nbi-yellow); }
 .form-success {
   display: flex; align-items: center; gap: 12px;
   background: rgba(14,138,74,0.18);
@@ -607,6 +609,13 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   border: 1px solid rgba(14,138,74,0.4);
   padding: 14px 16px; border-radius: 12px;
   margin-top: 12px; font-size: 14px;
+}
+.form-error {
+  background: rgba(230,57,70,0.14);
+  color: #f7c4c9;
+  border: 1px solid rgba(230,57,70,0.45);
+  padding: 14px 16px; border-radius: 12px;
+  margin-top: 12px; font-size: 14px; line-height: 1.5;
 }
 
 /* ---------- Footer ---------- */

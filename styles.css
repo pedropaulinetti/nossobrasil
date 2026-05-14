@@ -1653,7 +1653,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   position: absolute;
   bottom: 120px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   z-index: 3;
   text-align: center;
   color: #fff;
